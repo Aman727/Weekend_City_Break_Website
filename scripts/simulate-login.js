@@ -9,6 +9,7 @@ function login(event){
     const incorrectCredentialsAlert = document.getElementById("incorrectCredentialsAlert");
     //Create array users to be populated with every user in localStorage
     const users = [];
+    let userFound = false;
 
     //Loop through every element in localStorage. If its key starts with "user_" then get the string value, convert into a user object and add to the users array
     for (let i = 0; i < localStorage.length; i++){
@@ -24,15 +25,18 @@ function login(event){
 
         //If the entered email and username exist in localStorage, simulate login by redirecting to home page
         if (users[i].email == email && users[i].password == password){
+            userFound = true;
             incorrectCredentialsAlert.classList.add("d-none")
             window.location.replace("../index.html")
             //Set the currentUser
             localStorage.setItem("currentUser", email);
         }
-        //If entered email and username don't exist in localStorage, show incorrect credentials message
-        else{
-            incorrectCredentialsAlert.classList.remove("d-none");
-        }
+
+    }
+
+    //If the user isn't found after looping through every user in users array, show incorrect credentials message
+    if (!userFound){
+        incorrectCredentialsAlert.classList.remove("d-none");
     }
 }
 
