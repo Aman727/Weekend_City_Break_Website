@@ -17,5 +17,5 @@ function register(event) {
 }
 
 
-//Add an input listener onto the register button. When clicked the register() function will be called
+//Add an event listener onto the registrationForm. When the register button is clicked, the register() function will be called
 document.getElementById("registrationForm").addEventListener("submit", register);
