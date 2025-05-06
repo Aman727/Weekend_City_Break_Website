@@ -14,6 +14,9 @@ function register(event) {
 
     //Store user in localStorage
     localStorage.setItem(userId, JSON.stringify(user));
+
+    //Redirect to login page
+    window.location.replace("../pages/login.html")
 }
 
 
