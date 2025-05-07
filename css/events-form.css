@@ -1,0 +1,21 @@
+.form-container {
+    align-items: center;
+    width: 700px;
+}
+
+.form-label {
+    width: 120px;
+    text-align: right;
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.buttons-container {
+    align-items: center;
+}
+
+.btn {
+    text-align: right;
+    margin-right: 15px;
+    margin-bottom: 0;
+}

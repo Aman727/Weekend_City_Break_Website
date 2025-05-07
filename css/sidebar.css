@@ -31,9 +31,23 @@
     color: black;
 }
 
+.sidebar .bi-active {
+    font-size: 3.535rem;
+    color: white;
+}
+
 .sidebar .fa {
     padding-top: 10px;
     padding-bottom: 15px;
     font-size: 3.535rem;
     color: black;
+}
+
+.sidebar .nav-text-active {
+    font-size: 0.8rem;
+    color: white;
+}
+
+.active-navbar-item {
+    background-color: dimgray;
 }

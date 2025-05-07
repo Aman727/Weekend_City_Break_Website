@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="../css/colour.css">
     <link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../css/events-form.css">
     <title>Events</title>
 </head>
 <body>
@@ -39,9 +40,9 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link theme-colour text-white" href="events.html">
-                        <i class="bi bi-calendar-week"></i>
-                        <span class="nav-text">Events</span>
+                    <a class="nav-link active-navbar-item" href="events.html">
+                        <i class="bi-active bi-calendar-week"></i>
+                        <span class="nav-text-active">Events</span>
                     </a>
                 </li>
 
@@ -80,40 +81,36 @@
             <div class="container pt-5">
 
                 <!-- Event name field -->
-                <div class="mb-3 w-100 text-center d-flex justify-content-center">
-                    <label for="eventName" class="form-label visually-hidden">Event name</label>
+                <div class="mb-3 w-100 text-center d-flex justify-content-center form-container">
+                    <label for="eventName" class="form-label">Event name</label>
                     <input class="form-control w-50" type="text" placeholder="Enter event name" id="eventName">
                 </div>
 
                 <!-- From date field -->
-                <div class="mb-3 w-100 text-center d-flex justify-content-center">
-                    <label for="fromDate" class="form-label visually-hidden">From date</label>
+                <div class="mb-3 w-100 text-center d-flex justify-content-center form-container">
+                    <label for="fromDate" class="form-label">From date</label>
                     <input class="form-control w-50" type="date" placeholder="dd/mm/yyyy" id="fromDate">
                 </div>
 
                 <!-- To date field -->
-                <div class="mb-3 w-100 text-center d-flex justify-content-center">
-                    <label for="toDate" class="form-label visually-hidden">To date</label>
+                <div class="mb-3 w-100 text-center d-flex justify-content-center form-container">
+                    <label for="toDate" class="form-label">To date</label>
                     <input class="form-control w-50" type="date" placeholder="dd/mm/yyyy" id="toDate">
                 </div>
 
                 <!-- Category dropdown menu -->
-                <div class="mb-3 w-50 text-center d-flex justify-content-center">
+                <div class="mb-3 w-100 text-center d-flex justify-content-center form-container">
                     <label for="categorySelect" class="form-label">Choose a category</label>
-                    <select class="form-select" id="categorySelect">
+                    <select class="form-select w-50" id="categorySelect">
                         <option selected>Select Event Category</option>
                         <option value="1">Sporting events</option>
                         <option value="2">Museums</option>
                     </select>
                 </div>
 
-                <!-- Clear all button -->
+                <!-- Clear all and Search buttons -->
                 <div class="mb-2 w-100 text-center d-flex justify-content-center">
                     <button class="btn theme-colour" id="clearALl">Clear all</button>
-                </div>
-
-                <!-- Search button -->
-                <div class="mb-2 w-100 text-center d-flex justify-content-center">
                     <button class="btn theme-colour" id="search">Search</button>
                 </div>
 
