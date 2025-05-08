@@ -17,37 +17,27 @@ const events = [
         category: 2,
         location: "South Kensington",
         description: "A Natural History Museum tour highlights the museum’s most famous exhibits, like dinosaur skeletons and the blue whale, while sharing fascinating facts and stories about the natural world. It’s a great way to discover the museum’s key attractions in a short time.",
-        image: "../images/national-history-museum"
+        image: "../images/national-history-museum.jpg"
     },
 
     {
         id: 3,
-        name: "National History Museum Tour",
-        date: "2025-5-23",
-        category: 2,
-        location: "South Kensington",
-        description: "A Natural History Museum tour highlights the museum’s most famous exhibits, like dinosaur skeletons and the blue whale, while sharing fascinating facts and stories about the natural world. It’s a great way to discover the museum’s key attractions in a short time.",
-        image: "../images/national-history-museum"
-    },
-
-    {
-        id: 4,
         name: "The London Marathon",
         date: "2025-4-27",
         category: 1,
         location: "Greenwich Park to Buckingham Palace",
         description: "World-famous 26.2-mile race that takes place annually through the streets of London, starting in Blackheath and finishing at The Mall near Buckingham Palace.",
-        image: "../images/london-marathon"
+        image: "../images/london-marathon.jpg"
     },
 
     {
-        id: 5,
+        id: 4,
         name: "Going Global Business Networking Event",
         date: "2025-8-12",
         category: 4,
         location: "Hyde Park",
         description: "The Going Global Business Networking Event in London brings together professionals, investment agencies, and global expansion experts for panel discussions and networking focused on international markets.",
-        image: "../images/networking-event"
+        image: "../images/networking-event.avif"
     }
 ]
 

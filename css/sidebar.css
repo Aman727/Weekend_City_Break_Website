@@ -1,7 +1,16 @@
 .sidebar {
     padding-top: 20px;
     position: sticky;
+    top: 70px;
     height: calc(100vh - 56px);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.navbar {
+    position: sticky;
+    top:0;
+    z-index: 1000;
 }
 
 .sidebar .nav-link {
