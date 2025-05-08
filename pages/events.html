@@ -103,8 +103,10 @@
                     <label for="categorySelect" class="form-label">Choose a category</label>
                     <select class="form-select w-50" id="categorySelect">
                         <option selected>Select Event Category</option>
-                        <option value="1">Sporting events</option>
+                        <option value="1">Sporting Events</option>
                         <option value="2">Museums</option>
+                        <option value="3">Entertainment and Arts</option>
+                        <option value="4">Networking and Business</option>
                     </select>
                 </div>
 
@@ -113,14 +115,55 @@
                     <button class="btn theme-colour" id="clearALl">Clear all</button>
                     <button class="btn theme-colour" id="search">Search</button>
                 </div>
+            </div>
+
+            <!-- Search Results Container -->
+            <div class="container pt-5">
+                <!-- Result Card -->
+                <div class="card shadow">
+
+
+
+                    <!-- Card body -->
+                    <div class="card-body mt-2">
+
+                        <!-- Row containing result information -->
+                        <div class="row">
+
+                            <!-- Column for image -->
+                            <div class="col-md-2">
+                                <img src="../images/fulham-everton.png" width="170">
+                            </div>
+
+                            <!-- Column for text info -->
+                            <div class="col-md-7">
+                                <h2>Fulham V Everton</h2>
+                                <p>Date: 10/05/2025</p>
+                                <p> Fulham's home game against Everton.</p>
+                            </div>
+
+                            <!-- Column for button -->
+                            <div class="col-md-1 pt-5">
+                                <button class="btn theme-colour" id="mapBtn"><i class="bi bi-geo-alt-fill"></i></button>
+                            </div>
+
+                            <!-- Column for button -->
+                            <div class="col-md-1 pt-5">
+                                <button class="btn theme-colour" id="ticketBtn"><i class="bi bi-ticket-perforated-fill"></i></button>
+                            </div>
+
+                            <!-- Column for button -->
+                            <div class="col-md-1 pt-5">
+                                <button class="btn theme-colour" id="reviewsBtn"><i class="bi bi-chat-left-text-fill"></i></button>
+                            </div>
 
 
 
 
+                        </div>
 
-
-
-
+                    </div>
+                </div>
             </div>
 
         </main>
