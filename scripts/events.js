@@ -47,16 +47,10 @@ function searchEvents(){
     const toDateQuery = document.getElementById("toDate").value;
     const categoryQuery = document.getElementById("categorySelect").value;
 
-    console.log("Search criteria:", nameQuery, fromDateQuery, toDateQuery, categoryQuery); // Debug
-    console.log("Number of event cards:", eventCards.length); // Debug
-
 
     //For each event card
     eventCards.forEach((card, index) => {
         const event = events[index];
-
-        console.log("Processing event:", event.name);
-
 
         //Is namequery empty or does event name include part of name query? If so then nameMatch is true
         const nameMatch = nameQuery === "" || event.name.toUpperCase().includes(nameQuery);
@@ -115,4 +109,11 @@ function clearAllFields(){
     });
 }
 
+function initializeTooltips() {
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+}
+
+
 document.addEventListener("DOMContentLoaded", getEvents)
+document.addEventListener("DOMContentLoaded", initializeTooltips)

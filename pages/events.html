@@ -83,7 +83,11 @@
                 <!-- Event name field -->
                 <div class="mb-3 w-100 text-center d-flex justify-content-center form-container">
                     <label for="eventName" class="form-label">Event name</label>
-                    <input class="form-control w-50" type="text" placeholder="Enter event name" id="eventName">
+                    <div class="position-relative w-50">
+                        <input class="form-control" type="text" placeholder="Enter event name" id="eventName">
+                        <i class="bi bi-info-circle position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%);" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Enter the name of the event you're looking for or leave blank to find all events in your chosen date or category"></i>
+                    </div>
+
                 </div>
 
                 <!-- From date field -->
