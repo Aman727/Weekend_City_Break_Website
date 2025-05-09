@@ -38,56 +38,68 @@ const events = [
     }
 ];
 
+let eventCards = [];
+
 function searchEvents(){
-    const nameQuery = document.getElementById("eventName").value;
+    console.log("SEARCH FUNCTION CALLED")
+    const nameQuery = document.getElementById("eventName").value.toUpperCase();
     const fromDateQuery = document.getElementById("fromDate").value;
     const toDateQuery = document.getElementById("toDate").value;
     const categoryQuery = document.getElementById("categorySelect").value;
+
+    console.log("Search criteria:", nameQuery, fromDateQuery, toDateQuery, categoryQuery); // Debug
+    console.log("Number of event cards:", eventCards.length); // Debug
+
 
     //For each event card
     eventCards.forEach((card, index) => {
         const event = events[index];
 
+        console.log("Processing event:", event.name);
+
+
         //Is namequery empty or does event name include part of name query? If so then nameMatch is true
         const nameMatch = nameQuery === "" || event.name.toUpperCase().includes(nameQuery);
 
-        /*
 
-        // Date checks
+
+        //  Check if event.date is before the from date or after the to date.
         let dateMatch = true;
-        if (fromDateQuery && event.date < fromDateQuery) {
+        if (fromDateQuery !== "" && event.date < fromDateQuery) {
             dateMatch = false;
         }
-        if (toDateQuery && event.date > toDateQuery) {
+        if (toDateQuery !== "" && event.date > toDateQuery) {
             dateMatch = false;
         }
 
-        // Category check - note that the default option value is "Select Event Category"
+
+        // If categoryQuery set to the default "Select Event Category" or it's equal to the categoryQuery selection made by the user, categoryMatch is true
         const categoryMatch = categoryQuery === "Select Event Category" || categoryQuery === event.category;
 
-        // If all criteria match, show the card, otherwise hide it
+
+        // If each match is true, then show the card, else make it invisible
         if (nameMatch && dateMatch && categoryMatch) {
             card.classList.remove("d-none");
-            foundMatch = true;
+            //foundMatch = true;
         } else {
             card.classList.add("d-none");
         }
-
-         */
-
-
     });
 
 }
 
 function getEvents(){
     //Make the results container accessible
-    const resultsContainer = document.querySelector(".container.pt-5");
+    const containers = document.querySelectorAll(".container.pt-5");
+    const resultsContainer = containers[1];
+
+
+    //const resultsContainer = document.querySelector(".container.pt-5");
     //Get the events cards accessible in the JS, put them into an array
     eventCards = Array.from(resultsContainer.querySelectorAll(".card.shadow"));
 
     document.getElementById("search").addEventListener("click", searchEvents)
-    document.getElementById("clearALl").addEventListener("click", clearAllFields)
+    document.getElementById("clearAll").addEventListener("click", clearAllFields)
 }
 
 function clearAllFields(){
