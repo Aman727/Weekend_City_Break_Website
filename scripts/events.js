@@ -85,4 +85,22 @@ function getEvents(){
     const resultsContainer = document.querySelector(".container.pt-5");
     //Get the events cards accessible in the JS, put them into an array
     eventCards = Array.from(resultsContainer.querySelectorAll(".card.shadow"));
+
+    document.getElementById("search").addEventListener("click", searchEvents)
+    document.getElementById("clearALl").addEventListener("click", clearAllFields)
 }
+
+function clearAllFields(){
+    //Clear all fields
+    document.getElementById("eventName").value = "";
+    document.getElementById("fromDate").value = "";
+    document.getElementById("toDate").value = "";
+    document.getElementById("categorySelect").selectedIndex = 0;
+
+    //Display every event card
+    eventCards.forEach(card => {
+        card.classList.remove("d-none");
+    });
+}
+
+document.addEventListener("DOMContentLoaded", getEvents)
