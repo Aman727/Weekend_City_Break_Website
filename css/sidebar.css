@@ -27,7 +27,7 @@
 }
 
 .sidebar .nav-link:hover {
-    background-color: gainsboro;
+    background-color: darkgray;
 }
 
 .sidebar .nav-text {
@@ -58,5 +58,5 @@
 }
 
 .active-navbar-item {
-    background-color: dimgray;
+    background-color: #33006F;
 }
