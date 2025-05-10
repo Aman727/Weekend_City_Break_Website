@@ -67,8 +67,8 @@ function searchEvents(){
         }
 
 
-        // If categoryQuery set to the default "Select Event Category" or it's equal to the categoryQuery selection made by the user, categoryMatch is true
-        const categoryMatch = categoryQuery === "Select Event Category" || categoryQuery === event.category;
+        // If categoryQuery set to the default "All Event Categories" or it's equal to the categoryQuery selection made by the user, categoryMatch is true
+        const categoryMatch = categoryQuery === "All Event Categories" || categoryQuery === event.category;
 
 
         // If each match is true, then show the card, else make it invisible
