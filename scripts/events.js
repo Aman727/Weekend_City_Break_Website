@@ -47,6 +47,8 @@ function searchEvents(){
     const toDateQuery = document.getElementById("toDate").value;
     const categoryQuery = document.getElementById("categorySelect").value;
 
+    let visibleCount = 0;
+
 
     //For each event card
     eventCards.forEach((card, index) => {
@@ -74,10 +76,13 @@ function searchEvents(){
         // If each match is true, then show the card, else make it invisible
         if (nameMatch && dateMatch && categoryMatch) {
             card.classList.remove("d-none");
+            visibleCount++;
         } else {
             card.classList.add("d-none");
         }
     });
+
+    document.getElementById("resultsCount").textContent = visibleCount;
 
 }
 
@@ -87,9 +92,13 @@ function getEvents(){
     const resultsContainer = containers[1];
 
 
-    //const resultsContainer = document.querySelector(".container.pt-5");
     //Get the events cards accessible in the JS, put them into an array
     eventCards = Array.from(resultsContainer.querySelectorAll(".card.shadow"));
+
+    //Initialize resultsCount
+    document.getElementById("resultsCount").textContent = eventCards.length;
+
+
 
     document.getElementById("search").addEventListener("click", searchEvents)
     document.getElementById("clearAll").addEventListener("click", clearAllFields)
@@ -106,6 +115,10 @@ function clearAllFields(){
     eventCards.forEach(card => {
         card.classList.remove("d-none");
     });
+
+    //Reset resultsCount
+    document.getElementById("resultsCount").textContent = eventCards.length
+
 }
 
 function initializeTooltips() {
