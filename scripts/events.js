@@ -57,7 +57,7 @@ function searchEvents(){
 
 
 
-        //  Check if event.date is before the from date or after the to date.
+        //  Check if event.date falls outside selected date range
         let dateMatch = true;
         if (fromDateQuery !== "" && event.date < fromDateQuery) {
             dateMatch = false;
@@ -74,7 +74,6 @@ function searchEvents(){
         // If each match is true, then show the card, else make it invisible
         if (nameMatch && dateMatch && categoryMatch) {
             card.classList.remove("d-none");
-            //foundMatch = true;
         } else {
             card.classList.add("d-none");
         }
